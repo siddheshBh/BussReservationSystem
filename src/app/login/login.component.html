@@ -1,0 +1,48 @@
+<!-- <p>login works!</p> -->
+
+<div class="parent">
+    <div class="box">
+        <h1>Login Here</h1>
+        <form action="" [formGroup]="fbFormGroup">
+            <div class="inputBox">
+                <label for="">Username</label>
+                <input type="text" name="username" id="id1" autocomplete="off" required
+                    placeholder="Enter Email or Phone" formControlName="email_id">
+
+            </div>
+
+            <div class="inputBox">
+                <label for="">Password</label>
+                <input type="password" name="password" id="id2" autocomplete="off" required
+                    placeholder="Enter a password" minlength="4" formControlName="password">
+
+            </div>
+            <input type="submit" name="" id="" value="Login" [disabled]="!fbFormGroup.valid" (click)=loginProcessHere()
+                style="
+            justify-content: center;
+             margin-left:110px;
+              font-size: 20px;                
+               background: transparent;
+               border: none;
+               color: red;
+               background: lightblue;
+               padding: 8px 16px;
+               border-radius: 5px;                   
+               ">
+            <div class="alert alert-danger" role="alert" *ngIf="invalidCred">
+                Invalid Credentials.
+            </div>
+
+
+        </form>
+        <div>
+            <!-- <button >?</button> -->
+            <a routerLink="/forgotpaswrd" style="color: white; display: flex; font-size: 15px;">Forgot Password</a>
+            <a routerLink="/signup" style=" font-size: 15px; margin-top: 15px;color: white;">
+                Don't have account? Signup here</a>
+
+        </div>
+    </div>
+</div>
+
+<!-- {{myFormGroup.value | json}} / {{myFormGroup.valid}} -->

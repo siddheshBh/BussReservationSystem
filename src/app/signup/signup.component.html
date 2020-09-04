@@ -1,0 +1,65 @@
+<div class="container-fluid">
+
+    <div class="row " style="height: 2px;background-color: rgba(157, 240, 23, 0.863);"></div>
+
+
+
+    <div class="row " style="height: 450px; margin-top: 50px;">
+
+
+        <div class="col-3"></div>
+
+        <div class="col-6 " style="border: solid black; display: flex;">
+
+            <div class="col-6" [formGroup]=fbFormGroup>
+
+                <div style="font-weight: bold; font-size: 30px; margin-top: 10px;"> Signup</div>
+
+                <div style="margin-top: 20px;"><input type="text" name="" id="name" placeholder="name" size="35px"
+                        formControlName="first_name"></div>
+
+                <div style="margin-top: 20px;"><input type="text" name="" id="email" placeholder="email" size="35px"
+                        formControlName="email_id"></div>
+
+                <div style="margin-top: 20px;"><input type="text" name="" id="contact" placeholder="Contact" size="35px"
+                        formControlName="contact_no"></div>
+
+                <div style="margin-top: 20px;"><input type="password" name="" id="password" placeholder="Password"
+                        size="35px" formControlName="password"></div>
+
+                <!-- <div style="margin-top: 20px;"><input type="text" name="" id="cnpf" placeholder="Confirm Password"size="35px"formControlName="confirmpassword"></div> -->
+
+                <!-- <div  style="margin-top: 20px;margin-left: -10px;"><input class="btn btn-block btn-light btn-outline-dark" type="button"  value="Submit" (click)="submitProcess()" [disabled]="!fbFormGroup.valid"></div> -->
+
+                <!-- <input type="submit" value="Register" [disabled]="!fbFormGroup.valid" class="btn btn-outline-dark"
+                    (click)="registerProcess()" style="margin-top: 70px;"> -->
+
+
+                <button [disabled]="!fbFormGroup.valid" class="btn btn-outline-dark" (click)="registerProcess()"
+                    style="margin-top: 70px;">Signup</button>
+
+                <div style="display:none"> {{fbFormGroup.value | json}} </div>
+            </div>
+
+            <div class="col-6 " style="display: flex; justify-content: center; align-items: center; padding: 0px; "><i
+                    class="fa fa-balance-scale" style="font-size:150px;color: white;"></i>
+                <img src="assets/signup_image.jpg" alt="" srcset="" style="height: 420px;width: 100%;">
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+</div>
